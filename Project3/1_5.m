@@ -1,4 +1,4 @@
-x=audioread('C:\Users\LAPTOP\Documents\guitar1.wav');
+x=audioread('C:\Users\LAPTOP\Documents\vocals.wav');
 %spectogram tou x
 s1 = spectrogram(x);
 figure(1)
@@ -7,7 +7,7 @@ grid
 %
 gain=5;
 mix=1;
-y=fuzz(x,gain,mix);
+y=fuzz (x,gain,mix);
 %spectogram meta to fuzz
 s2 = spectrogram(y);
 figure(2)
@@ -17,4 +17,4 @@ grid
 soundsc(y,16000);
 gn=5;
 gp=5;
-z = nonlinear(x,gn,gp,mix);
+z=nonlinear(x,gn,gp,mix);
